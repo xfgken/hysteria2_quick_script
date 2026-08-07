@@ -9,12 +9,12 @@
 
 | | | |
 |---|---|---|
-| <img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/feature-fast.svg" width="48"> | **快速** | 一键命令下载安装并部署，配置完成立即启动服务 |
-| <img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/feature-simple.svg" width="48"> | **简约** | 清爽的彩色命令行界面，状态一目了然 |
-| <img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/feature-light.svg" width="48"> | **轻量** | 纯 Bash 脚本，无多余依赖，服务器资源占用极低 |
-| <img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/feature-obfs.svg" width="48"> | **混淆** | 内置 `salamander` 混淆功能，有效应对网络审查与流量识别 |
+| <img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/feature-fast.svg" width="36"> | **快速** | 一键命令下载安装并部署，配置完成立即启动服务 |
+| <img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/feature-simple.svg" width="36"> | **简约** | 清爽的彩色命令行界面，状态一目了然 |
+| <img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/feature-light.svg" width="36"> | **轻量** | 纯 Bash 脚本，无多余依赖，服务器资源占用极低 |
+| <img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/feature-obfs.svg" width="36"> | **混淆** | 内置 `salamander` 混淆功能，有效应对网络审查与流量识别 |
 
-<img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/section-rocket.svg" width="24"> **一键部署**
+<img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/section-rocket.svg" width="20"> **一键部署**
 
 在你的服务器（root 权限）上，复制粘贴并执行**一行命令**即可完成下载、安装、部署：
 
@@ -24,7 +24,7 @@ curl -fsSL -o /usr/local/bin/hy2.sh https://raw.githubusercontent.com/xfgken/hys
 
 > 该命令会：下载脚本 → 添加执行权限 → 创建 `hy2` 快捷命令。执行后即可使用。
 
-<img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/section-play.svg" width="24"> **启动脚本**
+<img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/section-play.svg" width="20"> **启动脚本**
 
 部署完成后，在终端输入：
 
@@ -34,7 +34,7 @@ hy2
 
 即可进入 Hysteria2 管理菜单。
 
-<img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/section-terminal.svg" width="24"> **功能菜单**
+<img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/section-terminal.svg" width="20"> **功能菜单**
 
 | 序号 | 功能 | 说明 |
 |------|------|------|
@@ -48,13 +48,13 @@ hy2
 | `[8]` | 卸载服务 | 卸载 Hysteria2 并清理配置与防火墙规则 |
 | `[0]` | 退出脚本 | 退出管理脚本 |
 
-<img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/section-server.svg" width="24"> **环境要求**
+<img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/section-server.svg" width="20"> **环境要求**
 
 - 操作系统：Linux（建议 Ubuntu / Debian）
 - 权限：**root**（或使用 `sudo hy2`）
 - 依赖：`curl`、`openssl`、`systemctl`（服务器常用工具均已预装）
 
-<img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/section-config.svg" width="24"> **配置要点**
+<img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/section-config.svg" width="20"> **配置要点**
 
 - **监听端口**：443（TCP/UDP，基于 QUIC）
 - **混淆**：`salamander`（服务器端与客户端均启用，订阅链接自动携带混淆参数）
@@ -68,7 +68,7 @@ hy2
 hysteria2://AUTH@SERVER_IP:443/?insecure=1&obfs=salamander&obfs-password=XXX&sni=www.cloudflare.com#Hysteria2-随机6位
 ```
 
-<img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/section-doc.svg" width="24"> **使用步骤**
+<img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/section-doc.svg" width="20"> **使用步骤**
 
 1. 执行**一键部署命令**（见上文）
 2. 输入 `hy2` 启动脚本
@@ -76,7 +76,7 @@ hysteria2://AUTH@SERVER_IP:443/?insecure=1&obfs=salamander&obfs-password=XXX&sni
 4. 选择 `[2]` 快速配置（自动生成配置并启动服务）
 5. 选择 `[3]` 生成带混淆的订阅链接，导入手机客户端
 
-<img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/section-preview.svg" width="24"> **界面预览**
+<img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/section-preview.svg" width="20"> **界面预览**
 
 ```
 ==============================================
@@ -105,6 +105,6 @@ hysteria2://AUTH@SERVER_IP:443/?insecure=1&obfs=salamander&obfs-password=XXX&sni
 请输入选择 [0-8]:
 ```
 
-<img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/section-license.svg" width="24"> **License**
+<img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/section-license.svg" width="20"> **License**
 
 MIT License
