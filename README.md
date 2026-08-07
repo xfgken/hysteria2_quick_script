@@ -1,26 +1,107 @@
-# Hysteria2_Quick_Script
+# Hysteria2 轻量管理脚本
 
-一个快速、简约的 Hysteria2 一键管理脚本。
+一款注重 **快速、简约、轻量** 的 Hysteria2 (基于 QUIC) 一键管理脚本，内置 **混淆功能**（防封锁），无需域名即可快速部署，几十秒完成配置。
 
-无需复杂配置，快速完成 Hysteria2 部署。
+> **一条命令，即刻部署** —— 极简界面 · 无域名即可用 · 混淆防封锁 · 秒级配置
 
-支持自签 TLS 证书（100年有效期）、混淆配置、节点生成和服务管理。
+## ⚡ 特点
 
+- **⚡ 快速**：一键命令下载安装并部署，配置完成立即启动服务
+- **🎨 简约**：清爽的彩色命令行界面，状态一目了然
+- **🪶 轻量**：纯 Bash 脚本，无多余依赖，服务器资源占用极低
+- **🛡️ 混淆**：内置 `salamander` 混淆功能，有效应对网络审查与流量识别
 
-## ✨ 特点
+## 🚀 一键部署
 
-- 🚀 快速部署
-- 🪶 简约轻量
-- 🔐 自动生成自签 TLS 证书
-- ♾️ 证书有效期约 100 年
-- 🛡️ 支持 Salamander 混淆
-- 🔗 自动生成节点链接
-- ⚙️ 简单菜单管理
-
-
-## 📦 安装
-
-使用 root 用户执行：
+在你的服务器（root 权限）上，复制粘贴并执行**一行命令**即可完成下载、安装、部署：
 
 ```bash
-curl -fsSL -o /usr/local/bin/hy2.sh https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/hysteria2.sh && chmod +x /usr/local/bin/hy2.sh && rm -f /usr/local/bin/hy2 && ln -s /usr/local/bin/hy2.sh /usr/local/bin/hy2
+curl -fsSL -o /usr/local/bin/hy2.sh https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/hysteria2.sh && chmod +x /usr/local/bin/hy2.sh && rm -f /usr/local/bin/hy2 && ln -s /usr/local/bin/hy2.sh /usr/local/bin/hy2 && echo '✅ hy2 已部署完成'
+```
+
+> 该命令会：下载脚本 → 添加执行权限 → 创建 `hy2` 快捷命令。执行后即可使用。
+
+## ▶️ 启动脚本
+
+部署完成后，在终端输入：
+
+```bash
+hy2
+```
+
+即可进入 Hysteria2 管理菜单。
+
+## 🕹️ 功能菜单
+
+| 序号 | 功能 | 说明 |
+|------|------|------|
+| `[1]` | 安装 Hysteria2 | 安装主程序 + 生成自签证书 + 开放 443 端口(TCP/UDP) |
+| `[2]` | 快速配置 | 自动生成服务器/客户端配置，并立即启动服务 |
+| `[3]` | 订阅链接 | 生成**含混淆**且**带随机节点名**的订阅链接 |
+| `[4]` | 查看信息 | 显示服务器信息、服务状态、端口监听、配置文件 |
+| `[5]` | 服务启动 | 启动 hysteria-server 服务 |
+| `[6]` | 服务停止 | 停止 hysteria-server 服务 |
+| `[7]` | 服务重启 | 重启 hysteria-server 服务 |
+| `[8]` | 卸载服务 | 卸载 Hysteria2 并清理配置与防火墙规则 |
+| `[0]` | 退出脚本 | 退出管理脚本 |
+
+## 📦 环境要求
+
+- 操作系统：Linux（建议 Ubuntu / Debian）
+- 权限：**root**（或使用 `sudo hy2`）
+- 依赖：`curl`、`openssl`、`systemctl`（服务器常用工具均已预装）
+
+## 🔧 配置要点
+
+- **监听端口**：443（TCP/UDP，基于 QUIC）
+- **混淆**：`salamander`（服务器端与客户端均启用，订阅链接自动携带混淆参数）
+- **伪装**：`https://www.cloudflare.com/`（反向代理伪装）
+- **TLS SNI**：`www.cloudflare.com`
+- **密码**：15 位纯字母数字，自动随机生成，无需手动设置
+
+### 订阅链接格式
+
+```
+hysteria2://AUTH@SERVER_IP:443/?insecure=1&obfs=salamander&obfs-password=XXX&sni=www.cloudflare.com#Hysteria2-随机6位
+```
+
+## 📝 使用步骤
+
+1. 执行**一键部署命令**（见上文）
+2. 输入 `hy2` 启动脚本
+3. 选择 `[1]` 安装 Hysteria2
+4. 选择 `[2]` 快速配置（自动生成配置并启动服务）
+5. 选择 `[3]` 生成带混淆的订阅链接，导入手机客户端
+
+## 📸 界面预览
+
+```
+==============================================
+          Hysteria2 管理脚本 2.0
+ 简约的界面、适用于无域名、混淆功能、快速配置
+==============================================
+
+服务器IP: 123.123.123.123
+系统版本: Ubuntu 24.04 LTS
+
+● Hysteria2 已安装
+● Hysteria2 在运行
+
+请选择要执行的功能：
+
+  [1] 安装Hysteria2
+  [2] 快速配置
+  [3] 订阅链接
+  [4] 查看信息
+  [5] 服务启动
+  [6] 服务停止
+  [7] 服务重启
+  [8] 卸载服务
+  [0] 退出脚本
+
+请输入选择 [0-8]:
+```
+
+## 📜 License
+
+MIT License
