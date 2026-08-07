@@ -76,6 +76,19 @@ hysteria2://AUTH@SERVER_IP:443/?insecure=1&obfs=salamander&obfs-password=XXX&sni
 4. 选择 `[2]` 快速配置（自动生成配置并启动服务）
 5. 选择 `[3]` 生成带混淆的订阅链接，导入手机客户端
 
+<img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/section-terminal.svg" width="20"> **客户端支持**
+
+本脚本生成的订阅链接/分享链接，兼容以下主流客户端：
+
+| 平台 | 客户端 |
+|------|--------|
+| 🤖 Android | **NekoBox** |
+| 🍎 iOS | **Shadowrocket**（小火箭） |
+| 🖥️ Windows | **NekoRay** |
+| 🐧 Linux | **NekoRay**（Linux 版） |
+
+> 将脚本生成的 `hysteria2://` 订阅链接直接导入对应客户端即可使用，客户端已内置 salamander 混淆协议支持。
+
 <img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/section-preview.svg" width="20"> **界面预览**
 
 <img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/images/preview.jpg" alt="界面预览" width="600">
