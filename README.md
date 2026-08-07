@@ -78,32 +78,7 @@ hysteria2://AUTH@SERVER_IP:443/?insecure=1&obfs=salamander&obfs-password=XXX&sni
 
 <img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/section-preview.svg" width="20"> **界面预览**
 
-```
-==============================================
-          Hysteria2 管理脚本 2.0
- 简约的界面、适用于无域名、混淆功能、快速配置
-==============================================
-
-服务器IP: 123.123.123.123
-系统版本: Ubuntu 24.04 LTS
-
-● Hysteria2 已安装
-● Hysteria2 在运行
-
-请选择要执行的功能：
-
-  [1] 安装Hysteria2
-  [2] 快速配置
-  [3] 订阅链接
-  [4] 查看信息
-  [5] 服务启动
-  [6] 服务停止
-  [7] 服务重启
-  [8] 卸载服务
-  [0] 退出脚本
-
-请输入选择 [0-8]:
-```
+<img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/images/preview.jpg" alt="界面预览" width="600">
 
 <img src="https://raw.githubusercontent.com/xfgken/hysteria2_quick_script/main/icons/section-license.svg" width="20"> **License**
 
